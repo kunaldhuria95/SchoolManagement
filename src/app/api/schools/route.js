@@ -41,7 +41,6 @@ export async function GET(req) {
         const [countRows] = await pool.execute(countQuery, params);
         const total = countRows[0].total;
 
-        // Fetch data with pagination — inject limit/offset directly as numbers
         const dataQuery = `SELECT * FROM schools ${whereSQL} LIMIT ${Number(limit)} OFFSET ${Number(offset)}`;
         const [rows] = await pool.execute(dataQuery, params);
 

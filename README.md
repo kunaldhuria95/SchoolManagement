@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# School Management System
 
-## Getting Started
+A full-stack **School Management System** built with Next.js and Node.js + Express. This project allows users to add, view, and search schools efficiently, with responsive UI, pagination, and skeleton loaders. MySQL is used for data storage and Cloudinary for image uploads. It is production-ready and can be deployed using Vercel or any Node.js server.
 
-First, run the development server:
+---
+
+## Features
+
+* Add, edit, and manage schools (name, address, city, image)
+* Search schools by name using query parameters
+* Pagination for large datasets
+* Responsive design with skeleton loaders
+* Production-ready build optimized with Next.js
+
+---
+
+## Tech Stack
+
+* Frontend: Next.js, React, Tailwind CSS, Shadcn/UI
+* Backend: Node.js, Express
+* Database: MySQL
+* File Storage: Cloudinary
+* Data Fetching: React Query (TanStack Query)
+
+---
+
+## Setup and Run
+
+Clone the repository and navigate into it:
+
+```bash
+git clone https://github.com/kunaldhuria95/SchoolManagement.git
+cd SchoolManagement
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env.local` file in the root folder with the following content:
+
+```env
+DATABASE_HOST
+DATABASE_USER
+DATABASE_PASSWORD
+DATABASE_NAME
+CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET
+```
+
+> Note: For production, you can create a `.env.production` file with the same variables or different production credentials. Next.js will use `.env.production` automatically when running `npm run build` + `npm start`.
+
+Setup the MySQL database:
+
+```sql
+CREATE DATABASE myschool;
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app. You can start editing pages in the `app/` directory, and changes will auto-update.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To run in production, build the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
+
+Start the production server:
+
+```bash
+npm start
+```
+
+Optional: Use PM2 to run in the background:
+
+```bash
+npm install -g pm2
+pm2 start npm --name "school-management" -- start
+```
+
+---
+
+## Folder Structure
+
+```
+app/
+  show-schools/        # Page to view and search schools
+  add-school/          # Page to add new schools
+components/            # UI components (Card, Input, Pagination)
+pages/api/             # API routes for CRUD operations
+```
+
+---
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+* [Next.js Documentation](https://nextjs.org/docs)
+* [React Documentation](https://reactjs.org/docs/getting-started.html)
+* [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+* [React Query Documentation](https://tanstack.com/query/latest)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
