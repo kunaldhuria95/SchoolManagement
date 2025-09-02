@@ -25,19 +25,19 @@ export default function HomePage() {
       {/* Overview Cards */}
       <section
         id="overview"
-        className="py-16 px-6 md:px-20 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        className="py-16 px-4 sm:px-6 md:px-20 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[100vw] overflow-x-hidden"
       >
         {/* Card 1 */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
-          <div className="relative h-80 w-full aspect-video ">
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition flex flex-col w-full">
+          <div className="relative w-full aspect-video">
             <Image
               src="/addSchool.png"
               alt="Add School"
               fill
-              className="object-contain p-4"
+              className="object-contain"
             />
           </div>
-          <div className="p-6 flex-1 flex flex-col">
+          <div className="p-4 sm:p-6 flex-1 flex flex-col">
             <h2 className="text-xl font-semibold mb-2">Page 1: Add School</h2>
             <p className="text-gray-600 text-sm flex-1">
               Create a responsive form using React Hook Form to enter school data.
@@ -47,8 +47,8 @@ export default function HomePage() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
-          <div className="relative h-80 w-full aspect-video">
+        <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition flex flex-col w-full">
+          <div className="relative w-full aspect-video">
             <Image
               src="/viewSchool.png"
               alt="Show Schools"
@@ -56,7 +56,7 @@ export default function HomePage() {
               className="object-contain"
             />
           </div>
-          <div className="p-6 flex-1 flex flex-col">
+          <div className="p-4 sm:p-6 flex-1 flex flex-col">
             <h2 className="text-xl font-semibold mb-2">Page 2: Show Schools</h2>
             <p className="text-gray-600 text-sm flex-1">
               Display all schools in a responsive grid like an ecommerce site.
@@ -66,9 +66,9 @@ export default function HomePage() {
         </div>
 
         {/* Card 3 */}
-        <Link href="https://github.com/kunaldhuria95/SchoolManagement">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
-            <div className="relative h-80 w-full aspect-video">
+        <Link href="https://github.com/kunaldhuria95/SchoolManagement" className="w-full">
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition flex flex-col w-full">
+            <div className="relative w-full aspect-video">
               <Image
                 src="/github.png"
                 alt="Deployment"
@@ -76,7 +76,7 @@ export default function HomePage() {
                 className="object-contain"
               />
             </div>
-            <div className="p-6 flex-1 flex flex-col">
+            <div className="p-4 sm:p-6 flex-1 flex flex-col">
               <h2 className="text-xl font-semibold mb-2">Submission & Hosting</h2>
               <p className="text-gray-600 text-sm flex-1">
                 Push your project to a public GitHub repo and host it on Vercel or Netlify.
@@ -86,6 +86,8 @@ export default function HomePage() {
           </div>
         </Link>
       </section>
+
+
     </div>
   );
 }
