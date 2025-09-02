@@ -1,6 +1,6 @@
 # School Management System
 
-A full-stack **School Management System** built with Next.js and Node.js + Express. This project allows users to add, view, and search schools efficiently, with responsive UI, pagination, and skeleton loaders. MySQL is used for data storage and Cloudinary for image uploads. It is production-ready and can be deployed using Vercel or any Node.js server.
+A full-stack **School Management System** built with Next.js and Node.js Backend. This project allows users to add, view, and search schools efficiently, with responsive UI, pagination, and skeleton loaders. MySQL is used for data storage and Cloudinary for image uploads. It is production-ready and can be deployed using Vercel or any Node.js server.
 
 ---
 
