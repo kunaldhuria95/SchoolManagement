@@ -11,7 +11,7 @@ export default function HomePage() {
           School Management Mini-Project
         </h1>
         <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto md:mx-0">
-          Build a responsive school database system using Next.js and MySQL. 
+          Build a responsive school database system using Next.js and MySQL.
           Input, store, and display school data with elegant UI and smooth interactions.
         </p>
         <Link
@@ -66,23 +66,25 @@ export default function HomePage() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
-          <div className="relative h-80 w-full aspect-video">
-            <Image
-              src="/github.png"
-              alt="Deployment"
-              fill
-              className="object-contain"
-            />
+        <Link href="https://github.com/kunaldhuria95/SchoolManagement">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
+            <div className="relative h-80 w-full aspect-video">
+              <Image
+                src="/github.png"
+                alt="Deployment"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <div className="p-6 flex-1 flex flex-col">
+              <h2 className="text-xl font-semibold mb-2">Submission & Hosting</h2>
+              <p className="text-gray-600 text-sm flex-1">
+                Push your project to a public GitHub repo and host it on Vercel or Netlify.
+                Include the GitHub and live URLs when submitting.
+              </p>
+            </div>
           </div>
-          <div className="p-6 flex-1 flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Submission & Hosting</h2>
-            <p className="text-gray-600 text-sm flex-1">
-              Push your project to a public GitHub repo and host it on Vercel or Netlify.
-              Include the GitHub and live URLs when submitting.
-            </p>
-          </div>
-        </div>
+        </Link>
       </section>
     </div>
   );
