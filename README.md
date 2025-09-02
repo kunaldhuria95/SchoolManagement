@@ -17,7 +17,7 @@ A full-stack **School Management System** built with Next.js and Node.js Backend
 ## Tech Stack
 
 * Frontend: Next.js, React, Tailwind CSS, Shadcn/UI
-* Backend: Node.js, Express
+* Backend: Node.js
 * Database: MySQL
 * File Storage: Cloudinary
 * Data Fetching: React Query (TanStack Query)
@@ -95,7 +95,7 @@ app/
   show-schools/        # Page to view and search schools
   add-school/          # Page to add new schools
 components/            # UI components (Card, Input, Pagination)
-pages/api/             # API routes for CRUD operations
+      api/             # API routes for CRUD operations
 ```
 
 ---
